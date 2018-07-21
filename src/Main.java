@@ -63,6 +63,8 @@ public class Main {
 		if (board.isFree(x, y)) {
 
 			board.setMove(x, y, "X");
+			board.printValues();
+			
 		} else {
 			Player1();  // recursion can be useful!
 			board.printValues();
@@ -70,13 +72,16 @@ public class Main {
 	}
 
 	public static void Player2() {
+		
 		System.out.println("O");
 		int[] output1 = player1.makeMove();
 		int x1 = output1[0]; // x
 		int y1 = output1[1]; // y
 		if (board.isFree(x1, y1)) {
 
-			board.setMove(x1, y1, "X");
+			board.setMove(x1, y1, "O");
+			board.printValues();
+			
 		} else {
 			Player2();
 			board.printValues();
