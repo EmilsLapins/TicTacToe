@@ -7,9 +7,9 @@ public class Board {
 
 
 	String[][] gameBoard = {
-			{ X, X, O }, 
-			{ O, N, N }, 
-			{ X, X, O } };
+			{ N, N, N }, 
+			{ N, N, N }, 
+			{ N, N, N } };
 
 	//
 	public boolean winCondition(String test) {
