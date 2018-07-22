@@ -16,7 +16,7 @@ public class Main {
 		while (choice != "0") {
 			System.out.println("Tic Tac Toe");
 			System.out.println(
-					"Enter game mode: '1': Player vs Computer, '2': Computer vs Computer, '3': Player vs Player, '0': Exit");
+					"Enter game mode: '1': Player vs Computer, '2': (Works) Computer vs Computer, '3': Player vs Player, '0': Exit");
 			choice = sc.nextLine();
 			
 			switch (choice) {
