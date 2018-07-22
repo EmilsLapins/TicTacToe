@@ -84,7 +84,7 @@ public class Board {
 
 	public void resetBoard() { // Resets the board values to "_"
 		System.out.println();
-		System.out.println("RESET");
+		System.out.println("Debug: Board RESET");
 		for (int i = 0; i < gameBoard.length; i++) {
 			String[] oneD = gameBoard[i];
 
