@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -7,8 +8,36 @@ public class Main {
 
 	static ComputerPlayer comp1 = new ComputerPlayer();
 	static ComputerPlayer comp2 = new ComputerPlayer();
-
+	
 	public static void main(String[] args) {
+		String choice = "";
+		Scanner sc = new Scanner(System.in);
+		
+		while (choice != "0") {
+			System.out.println("Tic Tac Toe");
+			System.out.println(
+					"Enter game mode: '1': Player vs Computer, '2': Computer vs Computer, '3': Player vs Player, '0': Exit");
+			choice = sc.nextLine();
+			
+			switch (choice) {
+			case "1":
+				break;
+			case "2":
+				Launch();
+				board.resetBoard();
+				break;
+			case "3":
+				break;
+			case "0":
+				System.out.println("Bye!");
+				choice = "0";
+				break;
+			}
+		}
+	} // main
+	
+	
+	public static void Launch() {
 		boolean oWins = false;
 		boolean xWins = false;
 		boolean isTied = false;
@@ -16,13 +45,7 @@ public class Main {
 
 		while (oWins == false && isTied == false && xWins == false) {
 
-			isTied = board.isTied();
-
-			oWins = board.winCondition("O");
-
-			xWins = board.winCondition("X");
-
-				//System.out.println("O wins!");
+		
 			if (oWins == true) {
 			} else if (xWins == true) {
 				System.out.println("X wins!");
@@ -49,7 +72,10 @@ public class Main {
 			}
 		}
 
-	} // main
+		
+	}
+
+	
 
 	public static void Player1() {
 		System.out.println('X');
@@ -63,7 +89,7 @@ public class Main {
 			
 		} else {
 			Player1();  // recursion can be useful!
-			//board.printValues();
+			
 		}
 	}
 
@@ -80,7 +106,7 @@ public class Main {
 			
 		} else {
 			Player2();
-			//board.printValues();
+			
 		}
 	}
 
