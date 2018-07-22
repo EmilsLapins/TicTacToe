@@ -91,9 +91,9 @@ public class Board {
 			for (int j = 0; j < oneD.length; j++) {
 				setMove(i, j, N);
 				// gameBoard[i][j] = N;
-				System.out.print("|" + gameBoard[i][j] + "|");
+				//System.out.print("|" + gameBoard[i][j] + "|");
 			}
-			System.out.println("");
+			//System.out.println("");
 		}
 	}
 }
