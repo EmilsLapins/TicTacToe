@@ -16,8 +16,6 @@ public class Main {
 
 		while (oWins == false && isTied == false && xWins == false) {
 
-			///////
-
 			isTied = board.isTied();
 
 			oWins = board.winCondition("O");

@@ -56,10 +56,10 @@ public class Board {
 	public boolean isFree(int x, int y) {
 		String isFree = gameBoard[x][y];
 		if (isFree.equalsIgnoreCase("X") || (isFree.equalsIgnoreCase("O"))) {
-			System.out.println("X: " + x + " Y: " + y + " Full!!!"); // test, delete later
+			System.out.println("Row: " + x + " Column: " + y + " is Full!!!"); // test, delete later
 			return false;
 		} else {
-			System.out.println("X: " + x + " Y: " + y + " Empty, setting value"); // test, delete later
+			System.out.println("Row: " + x + " Column: " + y + " is empty, setting value"); // test, delete later
 			return true;
 		}
 	}
