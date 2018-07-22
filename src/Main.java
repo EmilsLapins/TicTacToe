@@ -24,13 +24,12 @@ public class Main {
 
 			xWins = board.winCondition("X");
 
-			if (isTied == true) {
-				System.out.println("Tied!");
-			} else if (oWins == true) {
-				System.out.println("O wins!");
-
+				//System.out.println("O wins!");
+			if (oWins == true) {
 			} else if (xWins == true) {
 				System.out.println("X wins!");
+			} else if (isTied == true) {
+				System.out.println("Tied!");
 			} else {
 				Player1();
 			}
@@ -41,14 +40,13 @@ public class Main {
 
 			xWins = board.winCondition("X");
 
-			if (isTied == true) {
-				// System.out.println("Tied!");
-			} else if (oWins == true) {
+			if (oWins == true) {
 				System.out.println("O wins!");
-
 			} else if (xWins == true) {
 				System.out.println("X wins!");
-			} else {
+			}else if (isTied == true) {
+				System.out.println("Tied!");
+			}else {
 				Player2();
 			}
 		}
@@ -57,7 +55,7 @@ public class Main {
 
 	public static void Player1() {
 		System.out.println('X');
-		int[] output2 = player2.makeMove();
+		int[] output2 = comp2.makeMove();
 		int x = output2[0]; // x
 		int y = output2[1]; // y
 		if (board.isFree(x, y)) {
@@ -67,14 +65,14 @@ public class Main {
 			
 		} else {
 			Player1();  // recursion can be useful!
-			board.printValues();
+			//board.printValues();
 		}
 	}
 
 	public static void Player2() {
 		
 		System.out.println("O");
-		int[] output1 = player1.makeMove();
+		int[] output1 = comp1.makeMove();
 		int x1 = output1[0]; // x
 		int y1 = output1[1]; // y
 		if (board.isFree(x1, y1)) {
@@ -84,7 +82,7 @@ public class Main {
 			
 		} else {
 			Player2();
-			board.printValues();
+			//board.printValues();
 		}
 	}
 
