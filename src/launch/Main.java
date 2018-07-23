@@ -18,14 +18,14 @@ public class Main {
 			switch (choice) {
 			case "1":
 				//GamePlayerVsPc pVpc = new GamePlayerVsPc();
-				Game pcVpc = new Game("human", "pc2");
+				Game game1 = new Game("human", "pc2");
 				break;
 			case "2":
-				Game pcVpc1 = new Game("pc", "pc2");
+				Game game2 = new Game("pc", "pc2");
 				break;
 			case "3":
 				//GamePlayerVsPlayer pvp = new GamePlayerVsPlayer();
-				Game pcVpc2 = new Game("human", "human2");
+				Game game3 = new Game("human", "human2");
 				break;
 			case "0":
 				System.out.println("Bye!");
